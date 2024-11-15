@@ -88,11 +88,11 @@ const App = () => {
   const [positiveTickets, setPositiveTickets] = useState(5);
   const [negativeTickets, setNegativeTickets] = useState(5);
   const [configs, setConfigs] = useState({
-    spinDuration: 0.25,
+    spinDuration: 0.5,
     loseEmojis: "☠️",
     winEmojis: "🎉",
-    confettiNumber: 1000,
-    confettiSize: 50,
+    confettiNumber: 100,
+    confettiSize: 100,
     winTargetPoints: 10,
     wheelSize: 800,
   });
@@ -251,7 +251,7 @@ const App = () => {
         </DialogContent>
       </Dialog>
 
-      <div className="h-screen flex items-center justify-center flex-col gap-20 p-20">
+      <div className="h-screen flex items-center justify-center flex-col gap-20 p-20 overflow-hidden">
         <div className="flex justify-center w-full h-full">
           <div
             className="wheel-container"
@@ -269,7 +269,9 @@ const App = () => {
                 radiusLineWidth={1}
                 innerRadius={10}
                 fontSize={fontSize}
-                fontWeight={500}
+                fontWeight={200}
+                innerBorderColor="white"
+                radiusLineColor="white"
                 data={data.map((item) => {
                   return {
                     ...item,
@@ -402,7 +404,7 @@ const App = () => {
                 <DialogTrigger>Adicionar novo participante</DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Topzera</DialogTitle>
+                    <DialogTitle>Adiciona eu ae pae</DialogTitle>
                     <DialogDescription>
                       <form
                         onSubmit={createNewOption}
@@ -594,8 +596,8 @@ const App = () => {
                 spinDuration: 0.25,
                 loseEmojis: "☠️",
                 winEmojis: "🎉",
-                confettiNumber: 1000,
-                confettiSize: 50,
+                confettiNumber: 100,
+                confettiSize: 100,
                 winTargetPoints: 10,
                 wheelSize: 800,
               });
