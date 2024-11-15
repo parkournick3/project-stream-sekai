@@ -76,3 +76,9 @@
     max-width: unset;
   }
 }
+
+body {
+  background-image: url("/background.webp");
+  background-size: cover;
+  background-position: center;
+}

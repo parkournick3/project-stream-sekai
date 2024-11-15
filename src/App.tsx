@@ -89,7 +89,7 @@ const App = () => {
   const [negativeTickets, setNegativeTickets] = useState(5);
   const [configs, setConfigs] = useState({
     spinDuration: 0.5,
-    loseEmojis: "☠️",
+    loseEmojis: "💩",
     winEmojis: "🎉",
     confettiNumber: 100,
     confettiSize: 100,
@@ -326,7 +326,7 @@ const App = () => {
             )}
           </div>
 
-          <div className="flex gap-4 flex-col p-6 border-2 rounded-md max-h-full">
+          <div className="flex gap-4 flex-col p-6 border-2 rounded-md max-h-full bg-white shadow-2xl">
             <h4 className="text-center">Pontuação</h4>
             <ul className="overflow-y-auto max-h-full flex gap-2 flex-col">
               {transformedData
@@ -568,7 +568,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className="space-x-2">
+        <div className="space-x-2 bg-white shadow-2xl p-4 rounded-md">
           <Button disabled={hasWinner} onClick={handleSpinClick}>
             Girar
           </Button>
